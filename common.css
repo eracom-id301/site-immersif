@@ -1,0 +1,36 @@
+/* IBM Plex Sans Extra-light 200 (w/ italic) + Regular 400 (w/ italic) + Bold 700 (w/ italic) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+/* IBM Plex Mono Extra-light 200 (w/ italic) + Regular 400 (w/ italic) + Bold 700 (w/ italic) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+/* IBM Plex Serif Extra-light 200 (w/ italic) + Regular 400 (w/ italic) + Bold 700 (w/ italic) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+ 
+/*classes créées pour être réutilisée dans le html de chacun */
+.ibm-plex-sans {
+   font-family: 'IBM Plex Sans', sans-serif;
+   }
+
+.ibm-plex-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.ibm-plex-serif {
+  font-family: 'IBM Plex Serif', serif;
+}
+
+
+/*Les variables pour les couleurs */
+:root {
+   /* Colors */
+--yellow: #FFC700;
+--blue : #0500FF;
+--red : #A00000;
+}
+
+.exemple-utilisation-de-variable {
+   background-color: var(--red);
+   color: var(--blue);
+   border-color: var(--yellow);
+}
+ 

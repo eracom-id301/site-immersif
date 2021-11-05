@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body::before{
+  position: absolute;
+  top:0;
+  content: "";
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient(
+    #0500FF,
+    #FFFFFF  
+  );
+  opacity:0.3;
+}
+
+body::after{
+  position: absolute;
+  bottom:0;
+  content:"";
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient(
+#FFFFFF,
+#FFC700
+  );
+  opacity:0.2;
+}
+
+img{
+  width: 25vmin;
+  z-index:2 ;
+}
+
+header{
+  width: 90vw;
+  position: absolute;
+  top: 4vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.5vmin;
+}
+
+.button{
+border-color: rgba(0, 0, 0, 0.2);
+border-style: solid;
+border-width: 1px;
+padding: 4px;
+border-radius: 7px;
+}
+
+.boule{
+  width: 60vmin;
+  height:60vmin;
+  background: linear-gradient(
+    to right,
+    #0500FF,
+  #FFC700
+  );
+  opacity: 100%;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 70vh;
+  margin-top: 10vh;
+}
+
+.titre{
+  position: absolute;
+  top: 10vh;
+  z-index:3;
+  text-align: center;
+  font-size: 7vmin; 
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.Toculus{
+  font-size: 20vmin;
+  font-weight:normal;
+  margin-bottom: -3vmin;
+}
+
+.Tlight{
+  font-weight:100;
+}
+
+.casque{
+  width: 50vmin;
+  display: flex;
+  
+}
