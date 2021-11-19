@@ -5,7 +5,7 @@
 } 
 
 body{
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,8 +40,15 @@ body::after{
 
 img{
   width: 25vmin;
-  z-index:2 ;
+ 
 }
+
+.img {
+  display: flex;
+   z-index:2 ;
+}
+
+
 
 header{
   width: 90vw;
@@ -80,7 +87,7 @@ container{
   justify-content: center;
   align-items: center;
   width: 70vw;
-  height: 70vh;
+  height: 100vh;
   margin-top: 10vh;
 }
 
@@ -109,4 +116,42 @@ container{
   width: 50vmin;
   display: flex;
   
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  margin-bottom: 2rem;
+  height: 35vh;
+  width:100vw;
+
+}
+
+.link{
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  text-align: center;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(97, 97, 97,0.3);
+  border-radius: 7px;
+}
+
+
+.previous{
+background-image: url("/Oculus-Quest2/img/exemplepre.jpg");
+background-size: contain;
+width: 35vw;
+height: 25vh;
+
+}
+
+.next{
+  background-image: url("/Oculus-Quest2/img/exempleapr.jpg");
+  background-size: contain;
+  width: 35vw;
+height: 25vh;
 }

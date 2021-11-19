@@ -1,0 +1,16 @@
+Body {
+margin: 0;
+padding: 0;
+}
+
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  text-align: center;
+  font-size: 70px;
+}
+img{
+  margin: 0;
+ max-width: 100;
+  height: auto;
+  text-align: center;
+}
