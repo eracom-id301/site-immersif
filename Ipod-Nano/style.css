@@ -1,28 +1,243 @@
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+/* IBM Plex Sans Extra-light 200 (w/ italic) + Regular 400 (w/ italic) + Bold 700 (w/ italic) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+/* IBM Plex Mono Extra-light 200 (w/ italic) + Regular 400 (w/ italic) + Bold 700 (w/ italic) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+/* IBM Plex Serif Extra-light 200 (w/ italic) + Regular 400 (w/ italic) + Bold 700 (w/ italic) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+ 
+/*classes créées pour être réutilisée dans le html de chacun */
+.ibm-plex-sans {
+   font-family: 'IBM Plex Sans', sans-serif;
+   }
+
+.ibm-plex-mono {
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-html, body {
-   width: 100%;
-   height:  100%;
+.ibm-plex-serif {
+  font-family: 'IBM Plex Serif', serif;
 }
 
-.spacer {
-   height: 2000px;
+
+/*Les variables pour les couleurs */
+:root {
+   /* Colors */
+--yellow: #FFC700;
+--blue : #0500FF;
+--red : #A00000;
 }
 
-.video {
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   bottom: 0;
-   width: 150%;
-   transform: translateX(-50%) translateY(-50%);
-   z-index: 1;
+.exemple-utilisation-de-variable {
+   background-color: var(--red);
+   color: var(--blue);
+   border-color: var(--yellow);
 }
 
-.section {
 
+
+body {
+margin:0;
+background: var(--blue);
+background: radial-gradient(circle, var(--blue) 0%, rgba(201,199,255,1) 100%); 
+font-family: 'IBM Plex mono', monospace;
+overflow-x: hidden;
+position: relative;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 5vw 0 5vw;
+  color: white;
+  font-weight: 100;
+  height: 20vh;
+
+}
+
+nav h1{
+  font-size: 10vh;
+  font-weight: 500;
+  text-align:center;
+  position: relative;
+  z-index: 1;
+  top: 6.5vw;
+}
+
+/*nav h2{
+  font-size: .7rem;
+  border: 2px solid white;
+  padding: .4rem;
+  height: 1rem;
+  text-align: center;
+  border-radius:5px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}*/
+
+.iframe{
+  width: 30vw;
+  height: 55vh;
+  position:fixed;
+  bottom: 50px;
+  z-index: 2;
+}
+.frame{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  //position: fixed;
+}
+
+.ipod {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+.ipod3D {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  position:absolute;
+  width: 30vw;
+  height: 50vh;
+  z-index: 2;
+}
+
+.dD {
+ position: absolute;
+ width: 10vw; 
+ opacity:0;
+ min-width: 60px;
+}
+
+#main {
+  width: 5vw;
+}
+
+.ipodinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  width: 80vw;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 5vh;
+}
+
+#two, #for{
+  justify-self: end;
+}
+
+
+
+p{
+  text-align:justify;
+  color: white;
+  max-width: 30vw;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 200;
+  font-size: .9rem;
+  padding: 3%;
+  border: solid .5px white;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+p:hover span{
+color: black;
+font-size: 1rem;
+font-weight: 400;
+position: relative;
+z-index: 1;
+transition: .2s;
+}
+
+/*.titre {
+  position: absolute;
+  top: 15vh;
+  width: 200vw;
+  height: 15vh;
+  background: rgb(0,0,0);
+  background: linear-gradient(79deg, rgba(0,0,0,1) 45%, rgba(255,255,255,0) 100%);
+}*/
+
+.deco {
+  background: black;
+  background: linear-gradient(180deg, black 33%, rgba(255,255,255,0) 100%); 
+  height: 100%;
+  width: 10vw;
+  position: absolute;
+  left: 50px;
+  z-index: 1;
+}
+
+.dtitre {
+  background: black;
+  background: linear-gradient(79deg,black 45%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  top: 15vh;
+  width: 100vw;
+  height: 15vh;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  width:25vw;
+  height: 25vh;
+}
+
+.navbtn {
+ width:25vw;
+ height: 25vh;
+ margin-top: 60px;
+ margin-bottom: 30px;
+ border-radius: 5px;
+ border: solid 1.5px black;
+ background-size: cover;
+}
+
+.previous {
+ background-image: url("svg-siteImmersif/oculus quest.jpg");
+
+}
+
+.next {
+background-image: url("svg-siteImmersif/Polaroid.jpg");
+}
+
+.navbtn img {
+  position: absolute;
+  width: 20vw;
+  top:0;
+}
+
+.navbtn h2 {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding:0;
+  text-align: center;
+  position: relative;
+  margin:0;
+  bottom:0;
 }

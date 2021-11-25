@@ -10,33 +10,11 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+background: rgb(5,0,255);
+background: linear-gradient(180deg, rgba(5,0,255,0.3) 0%, rgba(255,255,255,1) 49%, rgba(255,255,255,1) 50%, rgba(255,199,0,0.3) 100%);
+background-attachment: fixed;
 }
 
-body::before{
-  position: absolute;
-  top:0;
-  content: "";
-  height: 50vh;
-  width: 100vw;
-  background: linear-gradient(
-    #0500FF,
-    #FFFFFF  
-  );
-  opacity:0.3;
-}
-
-body::after{
-  position: absolute;
-  bottom:0;
-  content:"";
-  height: 50vh;
-  width: 100vw;
-  background: linear-gradient(
-#FFFFFF,
-#FFC700
-  );
-  opacity:0.2;
-}
 
 img{
   width: 25vmin;
@@ -52,7 +30,7 @@ img{
 
 header{
   width: 90vw;
-  position: absolute;
+  position: sticky;
   top: 4vmin;
   display: flex;
   flex-direction: row;
@@ -88,7 +66,8 @@ container{
   align-items: center;
   width: 70vw;
   height: 100vh;
-  margin-top: 10vh;
+  position: sticky;
+  top: 0;
 }
 
 .titre{
@@ -154,4 +133,13 @@ height: 25vh;
   background-size: contain;
   width: 35vw;
 height: 25vh;
+}
+
+.helmetAnim{
+  
+}
+
+.void{
+  width: 100vw;
+  height:1000vh;
 }

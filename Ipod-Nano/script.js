@@ -1,35 +1,59 @@
-let $spacer = document.querySelector('.spacer');
-let $video = document.querySelector('.video');
+const main = document.querySelector("#main")
+const couple = document.querySelector("#couple")
+const casque = document.querySelector("#casque")
+const tete = document.querySelector("#tete")
+const body = document.querySelector("body")
+const frame = document.querySelector(".iframe")
+const imgGlitch = document.querySelectorAll("svg")
+const span = document.querySelectorAll("span")
+const paragraphe = document.querySelectorAll("p")
+const nextbtn = document.querySelector(".next")
+const prevbtn = document.querySelector(".previous")
 
-// The height of the spacer element
-let spacerHeight = $spacer.clientHeight;
-// the height of the viewport
-let viewportHeight = document.documentElement.getBoundingClientRect().height
-console.log(viewportHeight);
-// We can get the total scrollable height be subtracting the spacer element's height by the viewport height
-let scrollableHeight = spacerHeight - viewportHeight;
-// Get the full duration of the video
-let videoDuration;
+//phrases importantes qui se mettent en valeur
 
-// Keep track the video's playtime
-let currentTime = 0;
 
-// The scroll event handler
-function handleScrollEvent(event) {
-   // Here we sync the y position of the scrollbar to the progress of the video
-   currentTime = (window.scrollY * videoDuration) / scrollableHeight;
-   $video.currentTime = currentTime;
-   //console.log(currentTime);
-}
+// illustration qui apparraisse
+frame.addEventListener("mouseover", function (){
+  //main
+  main.style.transform = "translate(-20vw, -20vw)"
+  main.style.transition = ".5s"
+  main.style.opacity = "1"
+  //couple
+  couple.style.transform = "translate(20vw,20vw)"
+  couple.style.transition = ".5s"
+  couple.style.opacity = "1"
+  //casque
+  casque.style.transform = "translate(20vw, -20vw)"
+  casque.style.transition = ".5s"
+  casque.style.opacity = "1"
+  //tete
+  tete.style.transform = "translate(-20vw, 20vw)"
+  tete.style.transition = ".5s"
+  tete.style.opacity = "1"
+})
 
-// Loaded Data handler, that is, the function that runs after the video is ready to play
-function handleLoadedData(event) {
-   // Get the full video duration
-   videoDuration = $video.duration;
-   console.log(videoDuration);
-   // Do stuff when user scrolls
-   window.addEventListener('scroll', handleScrollEvent);
-}
+// illustration qui disparaisse
 
-// Do stuff when the video is ready to play
-$video.addEventListener('loadeddata', handleLoadedData);
+frame.addEventListener("mouseout", function () {
+  //main
+  main.style.transform = "translate(30vw, 0)"
+  main.style.transition = ".5s"
+  main.style.opacity = "0"
+  //couple
+  couple.style.transform = "translate(-32vw,0)"
+  couple.style.transition = ".5s"
+  couple.style.opacity = "0"
+  //casque
+  casque.style.transform = "translate(0, 40vh)"
+  casque.style.transition = ".5s"
+  casque.style.opacity = "0"
+  //tete
+  tete.style.transform = "translate(0,-40vh)"
+  tete.style.transition = ".5s"
+  tete.style.opacity = "0"
+})
+
+body.addEventListener("click", function () {
+  body.classList.add("glitch");
+})
