@@ -53,7 +53,3 @@ frame.addEventListener("mouseout", function () {
   tete.style.transition = ".5s"
   tete.style.opacity = "0"
 })
-
-body.addEventListener("click", function () {
-  body.classList.add("glitch");
-})

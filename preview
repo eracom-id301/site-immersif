@@ -1,0 +1,45 @@
+// HTML
+<footer>
+    <a href="../Oculus-Quest2/index.html" class="previous navbtn">
+    </a>
+    <a href="../Polaroid/index.html" class="next navbtn" >
+    </a>
+  </footer>
+
+
+
+  //CSS
+  footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  width:25vw;
+  height: 25vh;
+}
+
+.navbtn {
+ width:25vw;
+ height: 25vh;
+ margin-top: 60px;
+ margin-bottom: 30px;
+ border-radius: 5px;
+ border: solid 1.5px black;
+ background-size: cover;
+}
+
+.previous {
+ background-image: url("../Maitre-Yoda/preview.jpg");
+
+}
+
+.next {
+background-image: url("../Maitre-Yoda/preview.jpg");
+}
+
+.navbtn img {
+  position: absolute;
+  width: 20vw;
+  top:0;
+}

@@ -1,7 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.intro {
+  height: 100vh;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+  font-family: "ibm plex mono", monospace;
+  font-style: bold;
+
+  max-width: 100%;
+}
+
+.prems {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  
+  place-items: center;
+
+}
+
+
+
+section h1 {
+  padding-top: 300px;
+  text-align: center;
+  font-size: 80px;
+}
+
+
+
+.pioneer {
+  display: grid;
+  place-items: center;
+}
+
+* {
+  font-family: "ibm plex mono", monospace;
+}
+
+.content {
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+section {
+  display: grid;
+  grid: auto / 2fr 1fr;
+  grid-gap: 0 2em;
+  height: 100vh;
+}
+
+p {
+  grid-column: 2 / 3;
+  font-size: 2.8em;
+}
+
+.section-title {
+  grid-column: 1 / 2;
+  text-align: right;
+  align-self: start;
+  top: 1em;
+  position: sticky;
+  top: 1em;
+  font-size: 4em;
+}
+
+.cont {
+  display: grid;
+  place-items: center;
+}
 body {
   margin: 0px;
 }
 
+.content {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+section .content {
+  display: grid;
+  grid: auto / 200px 1fr;
+  grid-gap: 0 2em; 
+   width: 40vw;
+  height: 100%;
+}
+ p {
+    grid-column: 2 / 3;
+    float: right;
+    display: flex;
+    flex-direction: column;
+  }
+
+.section-title {
+  grid-column: 1 / 2;
+  text-align: right;
+  align-self: start;
+  top: 1em;
+  position: sticky;
+  
+}
 .video {
   background-color: blue;
 }
@@ -14,42 +134,10 @@ body {
   height: 100vh;
 }
 
-.img1 {
-  background-color: red;
-  object-fit: cover;
-  max-width: 100%;
-  height: auto; 
-}
-.img1 img{
- width:100%;
-  height:100%;
-  display:block;
-  vertical-align: center;
-}
-.img2 {
-  background-color: coral;
-   object-fit: cover;
-  max-width: 100%;
-  height: auto; 
-}
-.img2 img{
- width:100%;
-  height:100%;
-  display:block;
-  vertical-align: center;
+img{
+  width: 90%;
 }
 
-.img3 {
-  background-color: yellow;
-  object-fit: cover;
-  max-width: 100%;
-  height: auto; 
-}
-.img3 img{
- width:100%;
-  height:100%;
-  display:block;
-  vertical-align: center;
 }
 .info {
   width: 100vw;
@@ -96,8 +184,16 @@ h3 {
 .info h2,
 h3 {
   padding-left: 50px;
+ 
 }
 
+.left h3{
+  grid-column: 1 / 2;
+  text-align: right;
+  align-self: start;
+  top: 1em;
+  position: sticky;
+}
 .info p {
   font-family: "ibm plex mono", monospace;
   font-style: bold;
@@ -118,4 +214,70 @@ h3 {
 }
 
 footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  width:25vw;
+  height: 25vh;
+}
+
+.navbtn {
+ width:25vw;
+ height: 25vh;
+ margin-top: 60px;
+ margin-bottom: 30px;
+ border-radius: 5px;
+ border: solid 1.5px black;
+ background-size: cover;
+}
+
+.previous {
+ background-image: url("svg-siteImmersif/oculus quest.jpg");
+
+}
+
+.next {
+background-image: url("svg-siteImmersif/Polaroid.jpg");
+}
+
+.navbtn img {
+  position: absolute;
+  width: 20vw;
+  top:0;
+}
+ footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  width:25vw;
+  height: 25vh;
+}
+
+.navbtn {
+ width:25vw;
+ height: 25vh;
+ margin-top: 60px;
+ margin-bottom: 30px;
+ border-radius: 5px;
+ border: solid 1.5px black;
+ background-size: cover;
+}
+
+.previous {
+ background-image: url("../Polaroid/preview.jpg");
+
+}
+
+.next {
+background-image: url("../Ipod-Nano/preview.jpg");
+}
+
+.navbtn img {
+  position: absolute;
+  width: 20vw;
+  top:0;
 }

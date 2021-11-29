@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: left;
+}
+
+.sub {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 10%;
+  left: 7%;
+  transform: translate(-10%, -500%);
+}
+.info {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 20%;
+  right: 7%;
+  transform: translate(-10%, 1000%);
+}
+
+
+
+.container {
+  height: 100vh;
+}
+.container img {
+  width: 100%;
+  position: absolute;
+  height: 110vh;
+  object-fit: cover;
+  filter: brightness(1.4);
+  z-index: -1;
+}
+
+
+.main-title {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 6rem;
+  transform: translate(-10%, -300%);
+  transition: all 0.2s ease-in-out;
+}
+.main-title:hover {
+  transition: all 0.2s ease-in-out;
+  transform: translate(10%, -20%);
+  color: #a00000;
+}
+
+.content {
+  min-width: 80vw;
+  background: black;
+  min-height: 80vh;
+  z-index: 2;
+  position: absolute;
+
+}
+.content-images {
+  display: -ms-inline-grid;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 40vh;
+
+}
+
+.content-images img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  margin-top: 0vh;
+  filter: grayscale(100%);
+}
+
+.content-images img:hover {
+  cursor: pointer;
+  filter: contrast(100%) brightness(1.5);
+  transform: scale(1.2);
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+}
+
+.content-images a {
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2800px;
+  height: 100%;
+  visibility: hidden;
+}
+
+.slider-inner {
+  position: absolute;
+  top: 15%;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.item {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+}
+.img {
+  position: absolute;
+  left: -100px;
+  width: 600px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale(100%);
+}
+
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+
+
+}
+
+.trailer video {
+  position: relative;
+  max-width: 900px;
+  outline: none;
+}
+@media (max-width: 991px) 
+{.trailer video {
+  max-width: 90%;
+}
+
+.yoda {
+  cursor: pointer;
+}
+.yoda:active {
+  filter: contrast(200%) brightness(7);
+}
+
+  padding: 5rem 20rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+h5 {
+  font-weight: 400;
+}
+
+h4 {4
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 0.1;
+}
+
+@media screen and (max-width: 600px) {
+  .content-images {
+    display: inline-block;
+  }
+  .text {
+    padding: 2rem 2rem;
+  }
+  .content img {
+    margin: 0;
+  }
+}
+
+  .text {
+    padding: 2rem 2rem;
+  }
+  .content img {
+    margin: 0;
+  }
+}
+
+.carousel {
+  background-color: #a00000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  min-height: 100vh;
+  grid-gap: 0.5rem;
+  z-index: 5;
+}
+
+.carousel-pic {
+  overflow: hidden;
+}
+
+.carousel-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  filter: hue-rotate(100);
+  opacity: 17%;
+}
+
+.carousel-pic img:hover {
+  transform: scale(1.2);
+  opacity: 100%;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease-out;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.full-img {
+  position: absolute;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.25s ease-out;
+}
+
+.full-img.open {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal p {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  width:25vw;
+  height: 25vh;
+}
+
+.navbtn {
+ width:25vw;
+ height: 25vh;
+ margin-top: 60px;
+ margin-bottom: 30px;
+ border-radius: 5px;
+ border: solid 1.5px black;
+ background-size: cover;
+}
+
+.previous {
+ background-image: url("../Manette-PS1/preview.jpg");
+
+}
+
+.next {
+background-image: url("../Oculus-Quest2/preview.jpg");
+}
+
+.navbtn img {
+  position: absolute;
+  width: 20vw;
+  top:0;
+}

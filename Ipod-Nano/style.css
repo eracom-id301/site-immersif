@@ -92,7 +92,6 @@ nav h1{
   justify-content: center;
   width: 50vw;
   height: 50vh;
-  //position: fixed;
 }
 
 .ipod {
@@ -151,7 +150,7 @@ p{
   max-width: 30vw;
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 200;
-  font-size: .9rem;
+  font-size: 1.2rem;
   padding: 3%;
   border: solid .5px white;
   border-radius: 5px;
@@ -161,21 +160,12 @@ p{
 
 p:hover span{
 color: black;
-font-size: 1rem;
+font-size: 1.4rem;
 font-weight: 400;
 position: relative;
 z-index: 1;
 transition: .2s;
 }
-
-/*.titre {
-  position: absolute;
-  top: 15vh;
-  width: 200vw;
-  height: 15vh;
-  background: rgb(0,0,0);
-  background: linear-gradient(79deg, rgba(0,0,0,1) 45%, rgba(255,255,255,0) 100%);
-}*/
 
 .deco {
   background: black;
@@ -199,6 +189,7 @@ transition: .2s;
 footer {
   display: flex;
   justify-content: space-around;
+  margin-top: 30vh;
 }
 
 a{
@@ -217,12 +208,12 @@ a{
 }
 
 .previous {
- background-image: url("svg-siteImmersif/oculus quest.jpg");
+ background-image: url("../Pioneer/preview.jpg");
 
 }
 
 .next {
-background-image: url("svg-siteImmersif/Polaroid.jpg");
+background-image: url("../Manette-PS1/preview.jpg");
 }
 
 .navbtn img {
@@ -231,8 +222,51 @@ background-image: url("svg-siteImmersif/Polaroid.jpg");
   top:0;
 }
 
-.navbtn h2 {
+.arBtn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10pt;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: solid .5px white;
+  text-align: center;
+}
+
+
+/*make it responsive*/
+@media screen and (max-width: 600px){
+  .info {
+    display: flex;
+    row-gap: none;
+    margin:0;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav h1 {
+    font-size: 2.5rem;
+    top: 90px;
+  }
+  .iframe {
+    position: relative;
+    top:150px;
+    height: 60vh;
+    width: 40vw;
+  }
+  .ipod {
+  height: 60vh;
+}
+  #one, #two, #three, #for {
+    width: 70vw;
+    margin:0;
+    max-width: none;
+    padding: 20px;
+  }
+  .deco {
+    display: none;
+  }
+  .navbtn h2 {
   text-decoration: none;
+  font-size: 1rem;
   color: white;
   background-color: black;
   padding:0;
@@ -240,4 +274,17 @@ background-image: url("svg-siteImmersif/Polaroid.jpg");
   position: relative;
   margin:0;
   bottom:0;
+}
+.navbtn {
+ width:40vw;
+ height: 10vh;
+ margin-top: 60px;
+ margin-bottom: 30px;
+ border-radius: 5px;
+ border: solid 1.5px black;
+ background-size: cover;
+}
+ .footer{
+margin-top: none;
+ }
 }

@@ -119,27 +119,82 @@ footer{
   border-radius: 7px;
 }
 
+.void{
+  width: 100vw;
+  height:150vh;
+}
 
-.previous{
-background-image: url("/Oculus-Quest2/img/exemplepre.jpg");
-background-size: contain;
-width: 35vw;
-height: 25vh;
+.carac{
+  position: fixed;
+width: 100vw;
+height: 100vh;
+opacity: 0;
+}
+
+h3{
+font-size: 2.5vmax;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.2);
+border-style: solid;
+border-width: 5px;
+padding: 4px;
+border-radius: 20px;
 
 }
 
-.next{
-  background-image: url("/Oculus-Quest2/img/exempleapr.jpg");
-  background-size: contain;
-  width: 35vw;
-height: 25vh;
+.M1{
+  top: 30vh;
+  left:7vw;
+  
 }
-
-.helmetAnim{
+.M4{
+  top: 30vh;
+  right: 6vw;
   
 }
 
-.void{
-  width: 100vw;
-  height:1000vh;
+.M2{
+  top: 5vh;
+  left:35vw;
+
+}
+
+.M3{
+  bottom: 15vh;
+  left : 30vw;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  width:25vw;
+  height: 25vh;
+}
+
+.navbtn {
+ width:25vw;
+ height: 25vh;
+ margin-top: 60px;
+ margin-bottom: 30px;
+ border-radius: 5px;
+ border: solid 1.5px black;
+ background-size: cover;
+}
+
+.previous {
+ background-image: url("/Maitre-Yoda/preview.jpg");
+
+}
+
+.next {
+background-image: url("/Polaroid/preview.jpg");
+}
+
+.navbtn img {
+  position: absolute;
+  width: 20vw;
+  top:0;
 }

@@ -1,0 +1,382 @@
+@import "compass/css3";
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+/*Video gif animation*/
+main {
+  position: absolute;
+  left: 14vmin;
+  top: 10vmin;
+}
+
+canvas {
+  width: 160vmin !important;
+  height: 90vmin !important;
+  z-index: 0;
+}
+
+/*Cadre TV*/
+.cadre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("Image/cadre_ecran.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+
+/*Effet Cathodique*/
+#cathodic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+  z-index: 3;
+}
+
+/*Effet AV-1*/
+#switch {
+  display: none;
+}
+
+.container {
+  width: 70vw;
+  height: 70vh;
+  top: 15vh;
+  left: 15vw;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+
+@keyframes overlay-anim {
+  0% {
+    visibility: hidden;
+  }
+  20% {
+    visibility: hidden;
+  }
+  21% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+.overlay {
+  color: #00ff00;
+  position: absolute;
+  top: 5vmin;
+  left: 12vmin;
+  font-size: 5vmin;
+  text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#switch:checked ~ .container .overlay {
+  animation: overlay-anim 5s linear;
+  animation-fill-mode: forwards;
+}
+
+/*Fenetres*/
+.columns {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 50px;
+}
+
+.blue {
+  background: none;
+  width: 33vw;
+  height: 100vh;
+  z-index: 100;
+}
+
+.white {
+  background: none;
+  grid-column: 2/3;
+  height: 100vh;
+  width: 33vw;
+  z-index: 100;
+}
+
+.red {
+  background: none;
+  grid-column: 3/3;
+  height: 100vh;
+  width: 33vw;
+  z-index: 100;
+}
+
+.boxblue {
+  display: none;
+  color: black;
+  width: 292px;
+  background: #c0c0c0;
+  border-width: 1px;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  border-style: solid;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  padding: 1px;
+  box-shadow: 2px 2px 1px black;
+  z-index: 7;
+}
+
+.boxwhite {
+  color: black;
+  width: 292px;
+  background: #c0c0c0;
+  border-width: 1px;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  border-style: solid;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1px;
+  box-shadow: 2px 2px 1px black;
+  z-index: 7;
+}
+
+.boxred {
+  display: none;
+  color: black;
+  width: 292px;
+  background: #c0c0c0;
+  border-width: 1px;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  border-style: solid;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  padding: 1px;
+  box-shadow: 2px 2px 1px black;
+  z-index: 7;
+}
+
+button:focus {
+  outline: none;
+}
+
+div.title {
+  height: 18px;
+  width: 100%;
+  background: #000080;
+  color: #fff;
+  padding: 2px;
+}
+
+.petitlogo {
+  float: left;
+}
+
+img {
+  padding: 1px;
+}
+
+.normaltitle {
+  margin: 2px 0 0 1px;
+  float: left;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.title button {
+  margin: 2px 2px 2px 0;
+  float: right;
+  width: 14px;
+  height: 13.5px;
+  background: #c0c0c0;
+  border-width: 1px;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 0;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  focus: none;
+  box-shadow: 1px 1px 1px black;
+}
+
+div.body {
+  padding: 13px 12px 12px;
+  height: 100%;
+  width: calc(100% - 26px);
+  display: inline-block;
+}
+
+div.body p {
+  font-size: 11px;
+}
+
+div.body button {
+  font-size: 11px;
+  outline: 1px solid #000000;
+  background: #c0c0c0;
+  box-shadow: 1px 1px 1px black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 4px 10px;
+  margin: 20px auto 3px;
+  display: block;
+  position: relative;
+  bottom: 0px;
+}
+
+.error {
+  display: none;
+}
+
+.errortitle {
+  display: none;
+}
+
+.errorlogo {
+  display: none;
+  float: left;
+}
+
+/*Gestion taille d'ecran*/
+/*Telephone Paysage*/
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+  /*Video gif animation*/
+  main {
+    left: 14vmin;
+    top: 12vmin;
+  }
+
+  canvas {
+    width: 145vmin !important;
+    height: 81.56vmin !important;
+  }
+}
+
+/*Telephone Portrait : écran d'erreur */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  body {
+    background: #008080;
+  }
+
+  /*Video gif animation*/
+  canvas {
+    display: none;
+  }
+
+  /*Cadre TV*/
+  .cadre {
+    display: none;
+  }
+
+  /*Effet Cathodique*/
+  #cathodic {
+    display: none;
+  }
+
+  /*Effet AV-1*/
+  #switch {
+    display: none;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  /*Fenetres*/
+  .text1 {
+    display: none;
+  }
+
+  .error {
+    display: block;
+    font-size: 11px;
+  }
+
+  .normaltitle {
+    display: none;
+  }
+  .errortitle {
+    display: block;
+  }
+
+  .title button {
+    display: none;
+  }
+
+  .petitlogo {
+    display: none;
+  }
+
+  .errorlogo {
+    display: block;
+  }
+
+  .boxblue {
+    display: none;
+  }
+
+  .boxred {
+    display: none;
+  }
+}
+
+/*Navigation*/
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  width:25vw;
+  height: 25vh;
+}
+
+.navbtn {
+  width:25vw;
+  height: 25vh;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: solid 1.5px black;
+  background-size: cover;
+}
+
+.previous {
+  background-image: url("../Ipod-Nano/preview.jpg");
+}
+
+.next {
+  background-image: url("../Maitre-Yoda/preview.jpg");
+}
+
+.navbtn img {
+  position: absolute;
+  width: 20vw;
+  top:0;
+}
